@@ -1,0 +1,27 @@
+<%= form_tag :goto_login do%>
+<div id="login">
+    <div id="logintxtblank">
+          <div id="loginheading">
+            <h5>User Login&nbsp;&nbsp;&nbsp;
+            <%= radio_button :login, :usertype, 'hr'%> Admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= radio_button :login, :usertype, 'employee' , :checked => true %> Employee</h5>
+            
+          </div>
+          <div id="username">User Name:</div>
+          <div id="input">
+            <label>
+              <input name="username" type="text" class="input" id="textfield" value="enter your user name" />
+            </label>
+          </div>
+          <div id="password">Password:</div>
+          <div id="input02">
+            <label>
+              <input name="password" type="password" class="input" id="textfield2" value="password" />
+            </label>
+          </div>
+         <%= submit_tag 'Login', :class=>"buttons", :id => 'logins'%>
+          <div id="member">Not yet a Member? </div>
+          <div id="register"><a href="#" class="register">Register Now</a></div>
+    </div>
+</div>       
+<%end%>
